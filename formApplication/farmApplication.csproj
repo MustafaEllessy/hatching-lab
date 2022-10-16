@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAFFB847-9DA6-4F3B-A9F5-5CD85136E4A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>formApplication</RootNamespace>
+    <AssemblyName>formApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Export, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.1.UI, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.1.Extensions, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="DisplayImportedHatchingEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayImportedHatchingEggs.Designer.cs">
+      <DependentUpon>DisplayImportedHatchingEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplaySoledTableEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplaySoledTableEggs.Designer.cs">
+      <DependentUpon>DisplaySoledTableEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayTableEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayTableEggs.Designer.cs">
+      <DependentUpon>DisplayTableEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoledTableEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoledTableEggs.Designer.cs">
+      <DependentUpon>SoledTableEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableEggsStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableEggsStore.Designer.cs">
+      <DependentUpon>TableEggsStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportHatchingEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportHatchingEggs.Designer.cs">
+      <DependentUpon>ImportHatchingEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HatchingLabMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HatchingLabMenu.Designer.cs">
+      <DependentUpon>HatchingLabMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report1.designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2.designer.cs">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report3.designer.cs">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report4.designer.cs">
+      <DependentUpon>Report4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report5.designer.cs">
+      <DependentUpon>Report5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report6.designer.cs">
+      <DependentUpon>Report6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResizeForm.cs" />
+    <Compile Include="SoledHatchingEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoledHatchingEggs.Designer.cs">
+      <DependentUpon>SoledHatchingEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HatchingEggsStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HatchingEggsStore.Designer.cs">
+      <DependentUpon>HatchingEggsStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HatchingProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HatchingProcess.Designer.cs">
+      <DependentUpon>HatchingProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayHatchingProccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayHatchingProccess.Designer.cs">
+      <DependentUpon>DisplayHatchingProccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportEggs.Designer.cs">
+      <DependentUpon>ImportEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayImportedEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayImportedEggs.Designer.cs">
+      <DependentUpon>DisplayImportedEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportHatchingEggsForHatchingProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportHatchingEggsForHatchingProcess.Designer.cs">
+      <DependentUpon>ImportHatchingEggsForHatchingProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplaySoledHatchingEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplaySoledHatchingEggs.Designer.cs">
+      <DependentUpon>DisplaySoledHatchingEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TableEggs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableEggs.Designer.cs">
+      <DependentUpon>TableEggs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DisplayImportedHatchingEggs.resx">
+      <DependentUpon>DisplayImportedHatchingEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplaySoledTableEggs.resx">
+      <DependentUpon>DisplaySoledTableEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayTableEggs.resx">
+      <DependentUpon>DisplayTableEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoledTableEggs.resx">
+      <DependentUpon>SoledTableEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableEggsStore.resx">
+      <DependentUpon>TableEggsStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportHatchingEggs.resx">
+      <DependentUpon>ImportHatchingEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HatchingLabMenu.resx">
+      <DependentUpon>HatchingLabMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1 - Copy %283%29.rdlc" />
+    <EmbeddedResource Include="Report1 - Copy %284%29.rdlc" />
+    <EmbeddedResource Include="Report1 - Copy %285%29.rdlc" />
+    <EmbeddedResource Include="Report1 - Copy %286%29.rdlc" />
+    <EmbeddedResource Include="Report1 - Copy.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.resx">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report3.resx">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report4.resx">
+      <DependentUpon>Report4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report5.resx">
+      <DependentUpon>Report5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report6.resx">
+      <DependentUpon>Report6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoledHatchingEggs.resx">
+      <DependentUpon>SoledHatchingEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HatchingEggsStore.resx">
+      <DependentUpon>HatchingEggsStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HatchingProcess.resx">
+      <DependentUpon>HatchingProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayHatchingProccess.resx">
+      <DependentUpon>DisplayHatchingProccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportEggs.resx">
+      <DependentUpon>ImportEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayImportedEggs.resx">
+      <DependentUpon>DisplayImportedEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportHatchingEggsForHatchingProcess.resx">
+      <DependentUpon>ImportHatchingEggsForHatchingProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplaySoledHatchingEggs.resx">
+      <DependentUpon>DisplaySoledHatchingEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableEggs.resx">
+      <DependentUpon>TableEggs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تفريخ البيض.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ادخال.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\عرض.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\بيض التفريخ المباع.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\بيض التفريخ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\بيض المائدة.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\رصيد بيض التفريخ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\رصيد بيض المزارع.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\وارد بيض التفريخ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\وارد بيض المزارع.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\رصيد بيض التفريخ1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تفريخ البيض 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\وارد بيض 1التفريخ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تقارير.jpg" />
+    <None Include="Resources\eggs-farm-fresh.jpg" />
+    <None Include="Resources\Poultry-Egg-Incubator.jpg" />
+    <None Include="Resources\farmEggs.jfif" />
+    <None Include="Resources\eggs-farm-fresh1.jpg" />
+    <None Include="Resources\titleEggs.png" />
+    <None Include="Resources\download.jfif" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
